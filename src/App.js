@@ -1,9 +1,9 @@
-import SignUp from "./components/signup/signup"
+import SignIn from "./components/signup/signup"
 
 function App() {
   return (
     <>
-    <SignUp/>
+    <SignIn/>
     </>
   );
 }

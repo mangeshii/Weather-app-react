@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-const useForm = () => {
-    const [value, setValue] = useState({
+const useForm = (validateInfo) => {
+    const [value, setValues] = useState({
         username: "",
         email: "",
         password: "",
@@ -11,20 +11,19 @@ const useForm = () => {
     const [error, setError] = useState({});
 
     const handleChange = (e) => {
-        setValue({
-            ...value,
-            [e.target.name]: e.target.value,
-        });
+        setValues({ ...value, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setError(validateInfo(value));
     };
 
     return {
         handleChange,
         value,
         handleSubmit,
+        error,
     };
 };
 
