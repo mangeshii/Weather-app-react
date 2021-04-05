@@ -1,5 +1,5 @@
 import "./signup.css";
-import useForm from "./useForm";
+import UseForm from "./UseForm"
 import validateInfo from "./validateInfo";
 import { TextField, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -25,16 +25,9 @@ const usestyles = makeStyles({
     },
 });
 
-interface IState {
-    username: string;
-    email: string;
-    password: string;
-    confirmpassword: string;
-}
-
 
 const SignUp = () => {
-    const { handleChange, value, handleSubmit, error } = useForm(validateInfo);
+    const { handleChange, values, handleSubmit, errors } = UseForm(validateInfo);
 
     const classes = usestyles();
 
@@ -50,14 +43,14 @@ const SignUp = () => {
                                 className={classes.formInput}
                                 placeholder="First Name"
                                 autoComplete="off"
-                                value={value.username}
+                                value={values.username}
                                 onChange={handleChange}
                                 variant="outlined"
                             />
-                            {error.username && (
+                            {errors.username && (
                                 <div className={classes.errorDiv}>
                                     <p className={classes.errorMsg}>
-                                        {error.username}
+                                        {errors.username}
                                     </p>
                                 </div>
                             )}
@@ -72,14 +65,14 @@ const SignUp = () => {
                                 className={classes.formInput}
                                 placeholder="Email"
                                 autoComplete="off"
-                                value={value.email}
+                                value={values.email}
                                 onChange={handleChange}
                                 variant="outlined"
                             />
-                            {error.email && (
+                            {errors.email && (
                                 <div className={classes.errorDiv}>
                                     <p className={classes.errorMsg}>
-                                        {error.email}
+                                        {errors.email}
                                     </p>
                                 </div>
                             )}
@@ -94,14 +87,14 @@ const SignUp = () => {
                                 className={classes.formInput}
                                 placeholder="Password"
                                 autoComplete="off"
-                                value={value.password}
+                                value={values.password}
                                 onChange={handleChange}
                                 variant="outlined"
                             />
-                             {error.password && (
+                            {errors.password && (
                                 <div className={classes.errorDiv}>
                                     <p className={classes.errorMsg}>
-                                        {error.password}
+                                        {errors.password}
                                     </p>
                                 </div>
                             )}
@@ -109,21 +102,21 @@ const SignUp = () => {
                     </div>
 
                     <div className="form-inputs">
-                        <label htmlFor="confirmpassword">
+                        <label htmlFor="confirmPassword">
                             <TextField
                                 type="password"
-                                name="confirmpassword"
+                                name="confirmPassword"
                                 className={classes.formInput}
                                 placeholder="Confirm Password"
                                 autoComplete="off"
-                                value={value.confirmpassword}
+                                value={values.confirmPassword}
                                 onChange={handleChange}
                                 variant="outlined"
                             />
-                            {error.confirmpassword && (
+                            {errors.confirmPassword && (
                                 <div className={classes.errorDiv}>
                                     <p className={classes.errorMsg}>
-                                        {error.confirmpassword}
+                                        {errors.confirmPassword}
                                     </p>
                                 </div>
                             )}
@@ -144,3 +137,6 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
+
+

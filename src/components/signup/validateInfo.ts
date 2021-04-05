@@ -2,7 +2,7 @@ interface ErrorType {
     username: string;
     email: string;
     password: string;
-    confirmpassword: string;
+    confirmPassword: string;
 }
 
 export default function validateInfo(value: any) {
@@ -11,7 +11,7 @@ export default function validateInfo(value: any) {
         username: "",
         email: "",
         password: "",
-        confirmpassword: "",
+        confirmPassword: "",
     };
 
     if (value.username.length === 0) {
@@ -30,10 +30,10 @@ export default function validateInfo(value: any) {
         error.password = "Password should be 6 characters or more";
     }
 
-    if (!value.confirmpassword) {
-        error.confirmpassword = "Password is required";
-    } else if (value.confirmpassword !== value.password) {
-        error.confirmpassword = "Password do not match";
+    if (!value.confirmPassword) {
+        error.confirmPassword = "Password is required";
+    } else if (value.confirmPassword !== value.password) {
+        error.confirmPassword = "Password do not match";
     }
 
     return error;
