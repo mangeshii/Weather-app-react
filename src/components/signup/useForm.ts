@@ -1,7 +1,15 @@
+import { SetStateAction } from "react";
 import { useState } from "react";
 
-const useForm = (validateInfo) => {
-    const [value, setValues] = useState({
+interface IState {
+    username: string;
+    email: string;
+    password: string;
+    confirmpassword: string;
+}
+
+const useForm = (validateInfo: (value: IState) => SetStateAction<{}>)  => {
+    const [value, setValues] = useState<IState>({
         username: "",
         email: "",
         password: "",
@@ -10,11 +18,11 @@ const useForm = (validateInfo) => {
 
     const [error, setError] = useState({});
 
-    const handleChange = (e) => {
+    const handleChange = (e: any) => {
         setValues({ ...value, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault();
         setError(validateInfo(value));
     };

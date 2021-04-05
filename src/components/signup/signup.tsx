@@ -25,6 +25,14 @@ const usestyles = makeStyles({
     },
 });
 
+interface IState {
+    username: string;
+    email: string;
+    password: string;
+    confirmpassword: string;
+}
+
+
 const SignUp = () => {
     const { handleChange, value, handleSubmit, error } = useForm(validateInfo);
 
@@ -127,7 +135,7 @@ const SignUp = () => {
                         variant="contained"
                         className={classes.signInBtn}
                     >
-                        Sign In
+                        Sign Up
                     </Button>
                 </form>
             </div>

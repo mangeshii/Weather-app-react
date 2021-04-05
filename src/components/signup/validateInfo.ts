@@ -1,5 +1,19 @@
-export default function validateInfo(value) {
-    let error = {};
+interface ErrorType {
+    username: string;
+    email: string;
+    password: string;
+    confirmpassword: string;
+}
+
+export default function validateInfo(value: any) {
+
+    let error: ErrorType = {
+        username: "",
+        email: "",
+        password: "",
+        confirmpassword: "",
+    };
+
     if (value.username.length === 0) {
         error.username = "Username Required";
     }
