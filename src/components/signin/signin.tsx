@@ -1,15 +1,15 @@
-import "./signin.css"
+
 import { TextField, Button } from "@material-ui/core";
-import usestyles from "../signup/makeStyle"
+import signInStyles from "./signin_style"
 
 const SignIn = () => {
 
-    const classes = usestyles()
+    const classes = signInStyles()
     return (
         <>
-            <section className="sign-in-section">
-                <div className="sign-in-container">
-
+            <section className={classes.signInSection}>
+                <div className={classes.signInContainer}>
+                    <h1 className={classes.signInHeader}>Sign In</h1>
                     <form className="sign-in-form" >
                         <div className="sign-in-form-input">
                             <label htmlFor="username">
@@ -34,7 +34,9 @@ const SignIn = () => {
 
                         <Button type="submit"
                             variant="contained"
-                            className={classes.signInBtn}>
+                            color="primary"
+                            className={classes.signInBtn}
+                        >
                             Sign In
                         </Button>
 

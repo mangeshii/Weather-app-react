@@ -1,19 +1,20 @@
-import "./signup.css";
+
 import UseForm from "./UseForm"
 import validateInfo from "./validateInfo";
 import { TextField, Button } from "@material-ui/core";
-import usestyles from "./makeStyle"
+import signUpStyle from "./signup_styles"
 
 const SignUp = () => {
     const { handleChange, values, handleSubmit, errors } = UseForm(validateInfo);
 
-    const classes = usestyles();
+    const classes = signUpStyle();
 
     return (
-        <section className="main-section">
-            <div className="container">
-                <form className="form" onSubmit={handleSubmit}>
-                    <div className="form-inputs">
+        <section className={classes.SignUpSection}>
+            <div className={classes.SignUpContainer}>
+                <h1 className={classes.signUpHeader}>Sign Up</h1>
+                <form className={classes.form} onSubmit={handleSubmit}>
+                    <div className={classes.formInputs}>
                         <label htmlFor="firstName">
                             <TextField
                                 type="text"
@@ -35,7 +36,7 @@ const SignUp = () => {
                         </label>
                     </div>
 
-                    <div className="form-inputs">
+                    <div className={classes.formInputs}>
                         <label htmlFor="email">
                             <TextField
                                 type="email"
@@ -57,7 +58,7 @@ const SignUp = () => {
                         </label>
                     </div>
 
-                    <div className="form-inputs">
+                    <div className={classes.formInputs}>
                         <label htmlFor="password">
                             <TextField
                                 type="password"
@@ -79,7 +80,7 @@ const SignUp = () => {
                         </label>
                     </div>
 
-                    <div className="form-inputs">
+                    <div className={classes.formInputs}>
                         <label htmlFor="confirmPassword">
                             <TextField
                                 type="password"
@@ -105,6 +106,7 @@ const SignUp = () => {
                         type="submit"
                         variant="contained"
                         className={classes.signInBtn}
+                        color="primary"
                     >
                         Sign Up
                     </Button>
