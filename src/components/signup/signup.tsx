@@ -2,29 +2,7 @@ import "./signup.css";
 import UseForm from "./UseForm"
 import validateInfo from "./validateInfo";
 import { TextField, Button } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-
-const usestyles = makeStyles({
-    formInput: {
-        width: "80%",
-        margin: "1% 0%",
-    },
-    signInBtn: {
-        width: "80%",
-        margin: "2% 0%",
-    },
-    errorDiv: {
-        display: "flex",
-        justifyContent: "center",
-    },
-    errorMsg: {
-        width: "80%",
-        margin: "0% 0%",
-        textAlign: "start",
-        fontSize: "17px",
-    },
-});
-
+import usestyles from "./makeStyle"
 
 const SignUp = () => {
     const { handleChange, values, handleSubmit, errors } = UseForm(validateInfo);
@@ -36,21 +14,21 @@ const SignUp = () => {
             <div className="container">
                 <form className="form" onSubmit={handleSubmit}>
                     <div className="form-inputs">
-                        <label htmlFor="username">
+                        <label htmlFor="firstName">
                             <TextField
                                 type="text"
-                                name="username"
+                                name="firstName"
                                 className={classes.formInput}
                                 placeholder="First Name"
                                 autoComplete="off"
-                                value={values.username}
+                                value={values.firstName}
                                 onChange={handleChange}
                                 variant="outlined"
                             />
-                            {errors.username && (
+                            {errors.firstName && (
                                 <div className={classes.errorDiv}>
                                     <p className={classes.errorMsg}>
-                                        {errors.username}
+                                        {errors.firstName}
                                     </p>
                                 </div>
                             )}

@@ -1,20 +1,20 @@
 import { useState } from "react";
 
 interface ErrorType {
-    username: string;
+    firstName: string;
     email: string;
     password: string;
     confirmPassword: string;
 }
 const UseForm = (ValidateInfo: any) => {
     const [values, setValues] = useState({
-        username: "",
+        firstName: "",
         email: "",
         password: "",
         confirmPassword: "",
     });
     const [errors, setErrors] = useState<ErrorType>({
-        username: "",
+        firstName: "",
         email: "",
         password: "",
         confirmPassword: "",

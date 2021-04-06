@@ -1,5 +1,5 @@
 interface ErrorType {
-    username: string;
+    firstName: string;
     email: string;
     password: string;
     confirmPassword: string;
@@ -8,14 +8,14 @@ interface ErrorType {
 export default function validateInfo(value: any) {
 
     let error: ErrorType = {
-        username: "",
+        firstName: "",
         email: "",
         password: "",
         confirmPassword: "",
     };
 
-    if (value.username.length === 0) {
-        error.username = "Username Required";
+    if (value.firstName.length === 0) {
+        error.firstName = "Username Required";
     }
 
     if (!value.email) {
