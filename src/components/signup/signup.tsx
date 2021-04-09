@@ -1,8 +1,8 @@
-
 import UseForm from "./UseForm"
 import validateInfo from "./validateInfo";
-import { TextField, Button } from "@material-ui/core";
+import { TextField, Button ,Typography} from "@material-ui/core";
 import signUpStyle from "./signup_styles"
+
 
 const SignUp = () => {
     const { handleChange, values, handleSubmit, errors } = UseForm(validateInfo);
@@ -110,6 +110,12 @@ const SignUp = () => {
                     >
                         Sign Up
                     </Button>
+
+                    <div>
+                        <Typography variant="body2" className={classes.signInLink}>
+                            Already have an account? <a href="../signin">SignIn</a>
+                        </Typography>
+                    </div>
                 </form>
             </div>
         </section>
