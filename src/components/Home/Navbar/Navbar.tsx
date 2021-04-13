@@ -9,13 +9,16 @@ import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 
 import navStyle from "./Navbar_styles"
-
+import Main from "../Main/Main"
 
 export default function navBar() {
     const classes = navStyle();
 
+
+
     return (
         <div className={classes.grow}>
+
             <AppBar position="static">
                 <Toolbar className={classes.toolbar}>
                     <div className="iconbar">
@@ -52,6 +55,9 @@ export default function navBar() {
                     </div>
                 </Toolbar>
             </AppBar>
+            {/* <Main /> */}
         </div>
+
+
     );
 }

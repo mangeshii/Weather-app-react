@@ -21,7 +21,7 @@ const navStyle = makeStyles(theme => ({
         '&:hover': {
             backgroundColor: fade(theme.palette.common.white, 0.25),
         },
-        width: '50%',
+        width: '30%',
         [theme.breakpoints.down('sm')]: {
             width: '75%'
         }
