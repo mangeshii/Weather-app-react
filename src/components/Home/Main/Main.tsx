@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react"
 import main_styles from "./main_styles"
 import CircularProgress from "@material-ui/core/CircularProgress";
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 const API_KEY = "AIzaSyBdx37TZxfQRdIA18NvGn8c4RyjG0UEFkE"
@@ -30,17 +31,15 @@ const Main = () => {
                             const { id, snippet } = item
                             const { title, thumbnails } = snippet
                             const { medium } = thumbnails
+                            console.log(item)
                             return (
                                 <>
-                                    <div className={classes.flexContainer}>
-                                        <div className={classes.image}>
-                                            <p>
-                                                <img width={medium.width} height={medium.height} src={medium.url} />
-                                            </p>
 
-                                            <h5>{title}</h5>
+                                    <div className="card" style={{ width: '25rem', margin: '10px' }}>
+                                        <img className="card-img-top" src={medium.url} />
+                                        <div className="card-body">
+                                            <h5 className={classes.title}>{title}</h5>
                                         </div>
-
                                     </div>
                                 </>
                             )
@@ -51,6 +50,8 @@ const Main = () => {
         </>
     )
 }
-// }
+
 
 export default Main
+
+

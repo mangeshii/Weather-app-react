@@ -1,3 +1,4 @@
+import { pink } from "@material-ui/core/colors"
 import { makeStyles} from "@material-ui/core/styles"
 
 const main_styles=makeStyles({
@@ -5,35 +6,21 @@ const main_styles=makeStyles({
         height:'auto',
         width:'99.5%',
         display:'flex',
-        justifyContent:'center'
+        justifyContent:'center',
+        margin:'0px',
+        padding:'0px'
     },
     mainContainer:{
         height:'auto',
-        width:'100%',
-        backgroundColor:'yellow'
-    },
-
-    flexContainer: {
-        display: 'flex',
+        // backgroundColor:'yellow',
+        display:'flex',
+        justifyContent:'center',
         flexWrap: 'wrap',
-        flexDirection:'row'
+        // border:'2px solid red',
+        width:'60%'
     },
 
-    image:{
-        width: '500px',
-        height: '380px',
-        margin: '10px',
-        textAlign: 'center',
-        fontSize: '30px',
-        borderRadius: '20px',
-        boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
-        backgroundColor:'white'
-    },
-    cards:{
-        border:'2px solid red',
-        height:'300px',
-        width:'400px',
-    }
+
 
 })
 
