@@ -1,0 +1,84 @@
+.inner {
+    height: 80vh;
+    max-width: 150vh;
+    margin: auto;
+    border-radius: 2rem;
+    background: white;
+    display: flex;
+    padding: 3rem;
+}
+
+.outer {
+    background-image: linear-gradient(to right, #dbf3fa, white);
+    height: 100vh;
+    padding: 5rem;
+}
+
+.left-cont {
+    /* border: 2px solid black; */
+    width: calc(100% - 70%);
+    height: 100%;
+}
+.right-cond {
+    /* border: 2px solid rgb(59, 13, 57) !important; */
+    width: calc(100% - 30%) !important;
+    height: 100%;
+    margin: auto;
+    background-color: #fafafa ;
+
+    /* padding: 8rem 0rem 10rem; */
+    /* padding: auto; */
+}
+.country {
+    /* border:2px solid slateblue; */
+    font-family: "Balsamiq Sans";
+}
+.description {
+    /* border: 2px solid rosybrown; */
+    font-family: "Balsamiq Sans";
+    color: rgb(77, 93, 107);
+}
+.image {
+    /* border: 2px solid black; */
+    padding: 14rem 0rem;
+}
+.temperature h1 {
+    /* border:2px solid rgb(88, 85, 107); */
+    font-size: 5rem !important;
+    font-family: "Balsamiq Sans";
+}
+.feels-like {
+    /* border: 2px solid rosybrown; */
+    font-family: "Balsamiq Sans";
+}
+.flex-container{
+    /* border:2px solid salmon; */
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-container>div{
+    width: 17.8rem;
+    margin: 1rem;
+    height: 12rem;
+    /* border: 2px solid black; */
+    border-radius: 1rem;
+    background: white;
+}
+
+.date{
+    /* border:2px solid greenyellow; */
+    /* padding:2rem; */
+    font-family: "Balsamiq Sans";
+}
+.header{
+    /* border:2px solid darkblue; */
+    display: flex;
+    padding: 2rem;
+    justify-content: space-between;
+}
+
+input{
+    background-color: white;
+}
