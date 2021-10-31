@@ -1,22 +1,35 @@
 import "../Style/DisplayTemp.css";
 
-const ClimateCond = () => {
+const ClimateCond = (props) => {
+    const { temp } = props;
+    console.log(temp);
     return (
-        <div className="right-cond">
-        <div className="header">
-            <div className="date">
-               <h5> Saturday, 10:00 pm</h5>
+        <div className="right-cont">
+            <div className="header">
+                <div className="date">
+                    <h5> Saturday, 10:00 pm</h5>
+                </div>
+                <input type="text" />
             </div>
-            <input type="text" />
-
-        </div>
             <div className="flex-container">
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-                <div>5</div>
-                <div>6</div>
+                <div className="col-md-4 d-flex justify-content-center">
+                    <div className="climate ">1</div>
+                </div>
+                <div className="col-md-4  d-flex justify-content-center">
+                    <div className="climate">1</div>
+                </div>
+                <div className="col-md-4  d-flex justify-content-center">
+                    <div className="climate ">1</div>
+                </div>
+                <div className="col-md-4  d-flex justify-content-center">
+                    <div className="climate ">1</div>
+                </div>
+                <div className="col-md-4  d-flex justify-content-center">
+                    <div className="climate">1</div>
+                </div>
+                <div className="col-md-4  d-flex justify-content-center">
+                    <div className="climate ">1</div>
+                </div>
             </div>
         </div>
     );

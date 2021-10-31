@@ -3,11 +3,12 @@ import DisplayTemp from "./DiplayTemp";
 import ClimateCond from "./ClimateCond";
 
 
-const DisplayTempCont = () => {
+const DisplayTempCont = (props) => {
+    const {temp}=props
     return (
-        <div className="inner">
-            <DisplayTemp/>
-            <ClimateCond/>
+        <div className="inner-container">
+            <DisplayTemp temp={temp}/>
+            <ClimateCond temp={temp}/>
         </div>
     );
 };

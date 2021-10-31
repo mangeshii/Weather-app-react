@@ -1,84 +1,65 @@
-.inner {
-    height: 80vh;
-    max-width: 150vh;
-    margin: auto;
-    border-radius: 2rem;
-    background: white;
+.main-wrapper {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
     display: flex;
-    padding: 3rem;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(
+        circle 993px at 0.5% 50.5%,
+        rgba(137, 171, 245, 0.37) 0%,
+        rgba(245, 247, 252, 1) 100.2%
+    );
 }
-
-.outer {
-    background-image: linear-gradient(to right, #dbf3fa, white);
-    height: 100vh;
-    padding: 5rem;
+.inner-container {
+    width: 80%;
+    max-width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 0 8px 32px 0 rgba(83, 89, 179, 0.37);
 }
 
 .left-cont {
-    /* border: 2px solid black; */
     width: calc(100% - 70%);
     height: 100%;
-}
-.right-cond {
-    /* border: 2px solid rgb(59, 13, 57) !important; */
-    width: calc(100% - 30%) !important;
-    height: 100%;
-    margin: auto;
-    background-color: #fafafa ;
-
-    /* padding: 8rem 0rem 10rem; */
-    /* padding: auto; */
+    background-color: white;
 }
 .country {
-    /* border:2px solid slateblue; */
-    font-family: "Balsamiq Sans";
-}
-.description {
-    /* border: 2px solid rosybrown; */
-    font-family: "Balsamiq Sans";
-    color: rgb(77, 93, 107);
+    padding-top: 4rem !important;
 }
 .image {
-    /* border: 2px solid black; */
-    padding: 14rem 0rem;
+    height: 27rem;
 }
 .temperature h1 {
-    /* border:2px solid rgb(88, 85, 107); */
-    font-size: 5rem !important;
+    padding: 1rem;
+    font-size: 4rem !important;
     font-family: "Balsamiq Sans";
 }
-.feels-like {
-    /* border: 2px solid rosybrown; */
-    font-family: "Balsamiq Sans";
+.right-cont {
+    width: calc(100% - 30%);
+    background-color: #f1f3f5;
 }
-.flex-container{
-    /* border:2px solid salmon; */
-    height: fit-content;
-    margin: auto;
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.date {
+    font-weight: 500 !important;
+}
+
+.flex-container {
     display: flex;
     flex-wrap: wrap;
+    padding: 0 5rem;
 }
-.flex-container>div{
-    width: 17.8rem;
-    margin: 1rem;
+.flex-container > div {
     height: 12rem;
-    /* border: 2px solid black; */
-    border-radius: 1rem;
-    background: white;
+    margin-top: 2rem;
 }
-
-.date{
-    /* border:2px solid greenyellow; */
-    /* padding:2rem; */
-    font-family: "Balsamiq Sans";
-}
-.header{
-    /* border:2px solid darkblue; */
-    display: flex;
-    padding: 2rem;
-    justify-content: space-between;
-}
-
-input{
+.climate {
     background-color: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 1.5rem;
 }
