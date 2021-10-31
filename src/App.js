@@ -4,23 +4,37 @@ import DisplayTempCont from "./Components/DisplayTempCont";
 import "../src/Style/DisplayTemp.css";
 
 function App() {
-    const [temp, setTemp] = useState();
+    const [cityName, setCityName] = useState("");
+    const [temp, setTemp] = useState("");
 
-    const keys = "c9c4b2085677b74b3493c03f9f66b8e6";
+    const APP_ID = "c9c4b2085677b74b3493c03f9f66b8e6";
 
-    const getData = async () => {
-        const res = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${keys}`
-        );
-        const data = await res.json();
-        setTemp(data);
+    const search = async (event) => {
+        if (event.key === "Enter") {
+            const res = await fetch(
+                `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APP_ID}`
+            );
+            const data = await res.json();
+            setTemp(data);
+            setCityName("");
+        }
     };
-    useEffect(() => {
-        getData();
-    }, []);
+
+    // useEffect(() => {
+    //     search();
+    // });
+
+    const handleCityNameChange = (event) => {
+        setCityName(event.target.value);
+    };
     return (
         <div className="main-wrapper">
-            <DisplayTempCont temp={temp} />
+            <DisplayTempCont
+                temp={temp}
+                search={search}
+                handleCityNameChange={handleCityNameChange}
+                cityName={cityName}
+            />
         </div>
     );
 }
