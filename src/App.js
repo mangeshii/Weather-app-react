@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import DisplayTempCont from "./Components/DisplayTempCont";
 import "../src/Style/DisplayTemp.css";
 
 function App() {
     const [cityName, setCityName] = useState("");
-    const [temp, setTemp] = useState({});
+    const [temp, setTemp] = useState("");
 
     const APP_ID = "c9c4b2085677b74b3493c03f9f66b8e6";
 
@@ -22,7 +22,7 @@ function App() {
 
     // useEffect(() => {
     //     search();
-    // });
+    // }, [search]););
 
     const handleCityNameChange = (event) => {
         setCityName(event.target.value);

@@ -1,5 +1,6 @@
 import "../Style/DisplayTemp.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ClimateCond from "./ClimateCond";
 
 const DisplayTemp = (props) => {
     const { temp } = props;

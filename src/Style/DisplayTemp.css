@@ -19,7 +19,8 @@
     box-shadow: 0 8px 32px 0 rgba(83, 89, 179, 0.37);
 }
 
-.left-cont,.error-msg {
+.left-cont,
+.error-msg {
     width: 30% !important;
     height: 100%;
     background-color: white;
@@ -56,10 +57,24 @@
 .flex-container > div {
     height: 12rem;
     margin-top: 2rem;
+    /* border:2px solid red */
 }
-.climate {
+.climate-image,
+.climate-details {
     background-color: white;
     height: 100%;
     width: 100%;
-    border-radius: 1.5rem;
+    /* border-radius: 1.5rem; */
+    /* border:2px solid blue; */
+    padding: 1rem;
+}
+
+.sys,
+.unit {
+    /* border:2px solid yellow; */
+    text-align: right;
+}
+.value {
+    font-size: 2rem !important;
+    text-align: right;
 }
