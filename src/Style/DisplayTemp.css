@@ -19,8 +19,8 @@
     box-shadow: 0 8px 32px 0 rgba(83, 89, 179, 0.37);
 }
 
-.left-cont {
-    width: calc(100% - 70%);
+.left-cont,.error-msg {
+    width: 30% !important;
     height: 100%;
     background-color: white;
 }

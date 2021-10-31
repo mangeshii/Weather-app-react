@@ -2,23 +2,32 @@ import "../Style/DisplayTemp.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const DisplayTemp = (props) => {
-    const {temp}=props;
+    const { temp } = props;
+    console.log(temp);
     return (
-        <div className="left-cont">
-            <div className="country text-center pt-5 " >
-                <h1>paris</h1>
-            </div>
-            <div className="description text-center">
-                <h5>Haze</h5>
-            </div>
-            <div className="image text-center"></div>
-            <div className="temperature text-center">
-                <h1>27°C</h1>
-            </div>
-            <div className="feels-like text-center">
-                <h6>feels like 32°C</h6>
-            </div>
-        </div>
+        <>
+            {typeof temp.sys !== "undefined" ? (
+                <div className="left-cont">
+                    <div className="country text-center pt-5 ">
+                        <h1>{`${temp.name}, ${temp.sys.country}`}</h1>
+                    </div>
+                    <div className="description text-center">
+                        <h5>{temp.weather[0].description}</h5>
+                    </div>
+                    <div className="image text-center"></div>
+                    <div className="temperature text-center">
+                        <h1>{`${parseInt(temp.main.temp) - 273}°C`}</h1>
+                    </div>
+                    <div className="feels-like text-center">
+                        <h6>{`Feels like ${
+                            parseInt(temp.main.feels_like) - 273
+                        }°C`}</h6>
+                    </div>
+                </div>
+            ) : (
+                <p className="error-msg">not found </p>
+            )}
+        </>
     );
 };
 

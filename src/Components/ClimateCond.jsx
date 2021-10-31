@@ -2,7 +2,7 @@ import "../Style/DisplayTemp.css";
 
 const ClimateCond = (props) => {
     const { temp, search, handleCityNameChange, cityName } = props;
-    console.log(temp);
+
 
     return (
         <div className="right-cont">
