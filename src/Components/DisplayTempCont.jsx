@@ -1,13 +1,13 @@
 import "../Style/DisplayTemp.css";
-import DisplayTemp from "./DiplayTemp";
-import ClimateCond from "./ClimateCond";
+import MainCard from "./MainCard";
+import FlexCards from "./FlexCards";
 
 const DisplayTempCont = (props) => {
     const { temp, search, handleCityNameChange, cityName} = props;
     return (
         <div className="inner-container">
-            <DisplayTemp temp={temp} />
-            <ClimateCond
+            <MainCard temp={temp} />
+            <FlexCards
                 temp={temp}
                 search={search}
                 handleCityNameChange={handleCityNameChange}

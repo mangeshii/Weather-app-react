@@ -10,7 +10,7 @@ import sunny from "../Images/sunny.png";
 import thunder_storm from "../Images/scattered-thunderstorms.png";
 import snow from "../Images/snow.png";
 
-const DisplayTemp = (props) => {
+const MainCard = (props) => {
     const { temp } = props;
 
     const changeBackground = () => {
@@ -70,4 +70,4 @@ const DisplayTemp = (props) => {
         </>
     );
 };
-export default DisplayTemp;
+export default MainCard;
