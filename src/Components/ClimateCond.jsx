@@ -1,6 +1,6 @@
 import "../Style/DisplayTemp.css";
 import wind from "./wind.png";
-import direction from "./compass.png";
+import pressure from "./pressure.png"
 import spyglass from "./spyglass.png";
 import sunrise from "./sunrise.png";
 import sunset from "./sunset.png";
@@ -8,6 +8,7 @@ import humidity from "./humidity.png";
 
 const ClimateCond = (props) => {
     const { temp, search, handleCityNameChange, cityName } = props;
+    console.log(temp)
 
     var day = new Date();
     var todaysday =
@@ -27,92 +28,96 @@ const ClimateCond = (props) => {
                 />
             </div>
 
-            <div className="flex-container">
-                <div className="col-md-4 d-flex">
-                    <div className="climate-image col-md-5 d-flex align-items-center">
-                        <img
-                            src={wind}
-                            alt="wind"
-                            style={{ height: "7rem", width: "6rem" }}
-                        ></img>
+            {typeof temp !== "undefined" ? (
+                <div className="flex-container">
+                    <div className="col-md-4 d-flex">
+                        <div className="climate-image col-md-5 d-flex align-items-center">
+                            <img
+                                src={wind}
+                                alt="wind"
+                                style={{ height: "7rem", width: "6rem" }}
+                            ></img>
+                        </div>
+                        <div className="climate-details col-md-7">
+                            <div className="sys">wind speed </div>
+                            <div className="value">{temp.wind?.speed}</div>
+                            <div className="unit">m/s</div>
+                        </div>
                     </div>
-                    <div className="climate-details col-md-7">
-                        <div className="sys"></div>
-                        <div className="value"></div>
-                        <div className="unit"></div>
+                    <div className="col-md-4 d-flex ">
+                        <div className="climate-image col-md-5 d-flex align-items-center">
+                            <img
+                                src={pressure}
+                                alt="wind"
+                                style={{ height: "7rem", width: "6rem" }}
+                            ></img>
+                        </div>
+                        <div className="climate-details col-md-7">
+                            {" "}
+                            <div className="sys">Pressure</div>
+                            <div className="value">{temp.main?.pressure}</div>
+                            <div className="unit">hPa</div>
+                        </div>
+                    </div>
+                    <div className="col-md-4  d-flex justify-content-center">
+                        <div className="climate-image col-md-5 d-flex align-items-center">
+                            <img
+                                src={humidity}
+                                alt="wind"
+                                style={{ height: "7rem", width: "6rem" }}
+                            ></img>
+                        </div>
+                        <div className="climate-details col-md-7">
+                            <div className="sys">humidity</div>
+                            <div className="value">{temp.main?.humidity}</div>
+                            <div className="unit">%</div>
+                        </div>
+                    </div>
+                    <div className="col-md-4  d-flex justify-content-center">
+                        <div className="climate-image col-md-5 d-flex align-items-center">
+                            <img
+                                src={spyglass}
+                                alt="wind"
+                                style={{ height: "7rem", width: "6rem" }}
+                            ></img>
+                        </div>
+                        <div className="climate-details col-md-7">
+                            {" "}
+                            <div className="sys">visibility</div>
+                            <div className="value">{(temp?.visibility/1000).toFixed(1)}</div>
+                            <div className="unit">km</div>
+                        </div>
+                    </div>
+                    <div className="col-md-4  d-flex justify-content-center">
+                        <div className="climate-image col-md-5 d-flex align-items-center">
+                            <img
+                                src={sunrise}
+                                alt="wind"
+                                style={{ height: "7rem", width: "6rem" }}
+                            ></img>
+                        </div>
+                        <div className="climate-details col-md-7">
+                            <div className="sys">sunrise</div>
+                            <div className="value">{temp.sys?.sunrise}</div>
+                        </div>
+                    </div>
+                    <div className="col-md-4  d-flex justify-content-center">
+                        <div className="climate-image col-md-5 d-flex align-items-center">
+                            <img
+                                src={sunset}
+                                alt="wind"
+                                style={{ height: "7rem", width: "6rem" }}
+                            ></img>
+                        </div>
+                        <div className="climate-details col-md-7">
+                            <div className="sys">sunset</div>
+                            <div className="value">{temp.sys?.sunset}</div>
+                        </div>
                     </div>
                 </div>
-                <div className="col-md-4 d-flex ">
-                    <div className="climate-image col-md-5 d-flex align-items-center">
-                        <img
-                            src={direction}
-                            alt="wind"
-                            style={{ height: "7rem", width: "6rem" }}
-                        ></img>
-                    </div>
-                    <div className="climate-details col-md-7">
-                        {" "}
-                        <div className="sys"></div>
-                        <div className="value"></div>
-                        <div className="unit"></div>
-                    </div>
-                </div>
-                <div className="col-md-4  d-flex justify-content-center">
-                    <div className="climate-image col-md-5 d-flex align-items-center">
-                        <img
-                            src={humidity}
-                            alt="wind"
-                            style={{ height: "7rem", width: "6rem" }}
-                        ></img>
-                    </div>
-                    <div className="climate-details col-md-7">
-                        <div className="sys"></div>
-                        <div className="value"></div>
-                        <div className="unit"></div>
-                    </div>
-                </div>
-                <div className="col-md-4  d-flex justify-content-center">
-                    <div className="climate-image col-md-5 d-flex align-items-center">
-                        <img
-                            src={spyglass}
-                            alt="wind"
-                            style={{ height: "7rem", width: "6rem" }}
-                        ></img>
-                    </div>
-                    <div className="climate-details col-md-7">
-                        {" "}
-                        <div className="sys"></div>
-                        <div className="value"></div>
-                        <div className="unit"></div>
-                    </div>
-                </div>
-                <div className="col-md-4  d-flex justify-content-center">
-                    <div className="climate-image col-md-5 d-flex align-items-center">
-                        <img
-                            src={sunrise}
-                            alt="wind"
-                            style={{ height: "7rem", width: "6rem" }}
-                        ></img>
-                    </div>
-                    <div className="climate-details col-md-7">
-                        <div className="sys">sunrise</div>
-                        {/* <div className="value">{temp.sys.sunrise}</div> */}
-                    </div>
-                </div>
-                <div className="col-md-4  d-flex justify-content-center">
-                    <div className="climate-image col-md-5 d-flex align-items-center">
-                        <img
-                            src={sunset}
-                            alt="wind"
-                            style={{ height: "7rem", width: "6rem" }}
-                        ></img>
-                    </div>
-                    <div className="climate-details col-md-7">
-                        <div className="sys">sunset</div>
-                        {/* <div className="value">{temp.sys.sunset}</div> */}
-                    </div>
-                </div>
-            </div>
+            ) : (
+                <p>ss</p>
+            )}
         </div>
     );
 };
