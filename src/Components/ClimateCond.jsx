@@ -1,14 +1,14 @@
 import "../Style/DisplayTemp.css";
-import wind from "./wind.png";
-import pressure from "./pressure.png"
-import spyglass from "./spyglass.png";
-import sunrise from "./sunrise.png";
-import sunset from "./sunset.png";
-import humidity from "./humidity.png";
+import wind from "../Images/wind.png";
+import pressure from "../Images/pressure.png";
+import spyglass from "../Images/spyglass.png";
+import sunrise from "../Images/sunrise.png";
+import sunset from "../Images/sunset.png";
+import humidity from "../Images/humidity.png";
 
 const ClimateCond = (props) => {
     const { temp, search, handleCityNameChange, cityName } = props;
-    console.log(temp)
+    console.log(temp);
 
     var day = new Date();
     var todaysday =
@@ -84,7 +84,9 @@ const ClimateCond = (props) => {
                         <div className="climate-details col-md-7">
                             {" "}
                             <div className="sys">visibility</div>
-                            <div className="value">{(temp?.visibility/1000).toFixed(1)}</div>
+                            <div className="value">
+                                {(temp?.visibility / 1000).toFixed(1)}
+                            </div>
                             <div className="unit">km</div>
                         </div>
                     </div>

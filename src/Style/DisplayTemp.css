@@ -30,6 +30,9 @@
 }
 .image {
     height: 27rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .temperature h1 {
     padding: 1rem;

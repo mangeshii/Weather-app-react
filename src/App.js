@@ -4,7 +4,7 @@ import DisplayTempCont from "./Components/DisplayTempCont";
 import "../src/Style/DisplayTemp.css";
 
 function App() {
-    const [cityName, setCityName] = useState("mumbai");
+    const [cityName, setCityName] = useState("");
     const [temp, setTemp] = useState("");
 
     const APP_ID = "c9c4b2085677b74b3493c03f9f66b8e6";
