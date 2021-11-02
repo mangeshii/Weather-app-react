@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Balsamiq Sans";
+  font-size: 100%;
+  font-family: 'Varela', sans-serif;
+  font-weight: 900;
+
 }
 body{
   background: radial-gradient(
@@ -10,6 +16,12 @@ body{
         rgba(137, 171, 245, 0.37) 0%,
         rgba(245, 247, 252, 1) 100.2%
     );
+    font-family: "Varela Round", sans-serif;
 
+}
 
+@media only screen and (max-width: 1200px) {
+  html{
+    font-size: 75%;
+  }
 }

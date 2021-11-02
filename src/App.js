@@ -3,6 +3,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../src/Style/DisplayTemp.css";
 import MainCard from "./Components/MainCard";
 import FlexCards from "./Components/FlexCards";
+import Container from "@material-ui/core/Container";
+import "../src/Style/DisplayTemp.css"
+
+import Grid from "@material-ui/core/Grid";
 
 function App() {
     const [cityName, setCityName] = useState("");
@@ -24,10 +28,17 @@ function App() {
         setCityName(event.target.value);
     };
     return (
-        <div className="main-wrapper ">
-        <MainCard temp={temp}/>
-        <FlexCards temp={temp} search={search} cityName={cityName} handleCityNameChange={handleCityNameChange}/>
-        </div>
+        <Container className="main-container" maxWidth="lg" >
+        <Grid className="innercontainer" container spacing={3}>
+            <MainCard temp={temp} />
+            <FlexCards
+                temp={temp}
+                search={search}
+                cityName={cityName}
+                handleCityNameChange={handleCityNameChange}
+            />
+            </Grid>
+        </Container>
     );
 }
 
