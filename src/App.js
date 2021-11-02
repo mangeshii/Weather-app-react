@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import DisplayTempCont from "./Components/DisplayTempCont";
 import "../src/Style/DisplayTemp.css";
+import MainCard from "./Components/MainCard";
+import FlexCards from "./Components/FlexCards";
 
 function App() {
     const [cityName, setCityName] = useState("");
@@ -19,22 +20,13 @@ function App() {
             setCityName("");
         }
     };
-
-    // useEffect(() => {
-    //     search();
-    // }, [search]););
-
     const handleCityNameChange = (event) => {
         setCityName(event.target.value);
     };
     return (
-        <div className="main-wrapper">
-            <DisplayTempCont
-                temp={temp}
-                search={search}
-                handleCityNameChange={handleCityNameChange}
-                cityName={cityName}
-            />
+        <div className="main-wrapper ">
+        <MainCard temp={temp}/>
+        <FlexCards temp={temp} search={search} cityName={cityName} handleCityNameChange={handleCityNameChange}/>
         </div>
     );
 }

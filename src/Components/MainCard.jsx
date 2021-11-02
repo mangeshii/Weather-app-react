@@ -9,6 +9,7 @@ import mist from "../Images/mist.png";
 import sunny from "../Images/sunny.png";
 import thunder_storm from "../Images/scattered-thunderstorms.png";
 import snow from "../Images/snow.png";
+// import FlexCards from "./FlexCards";
 
 const MainCard = (props) => {
     const { temp } = props;
@@ -36,15 +37,17 @@ const MainCard = (props) => {
             }
         }
     };
+
     return (
         <>
-            {typeof temp.sys !== "undefined" ? (
-                <>
-                    <div className="left-cont">
-                        <div className="country text-center pt-5 ">
+            {typeof temp.main !== "undefined" ? (
+                <div className="left-container col-md-4 col-sm-12">
+                    <div className="temp-details">
+                        <div className="country ">
                             <h1>{`${temp.name}, ${temp.sys.country}`}</h1>
                         </div>
-                        <div className="description text-center">
+                        <div className="description">
+                            {" "}
                             <h5>{temp.weather[0].description}</h5>
                         </div>
                         <div className="image">
@@ -54,20 +57,51 @@ const MainCard = (props) => {
                                 style={{ height: "15rem" }}
                             />
                         </div>
-                        <div className="temperature text-center">
+                        <div className="temperature">
+                            {" "}
                             <h1>{`${parseInt(temp.main.temp) - 273}°C`}</h1>
                         </div>
-                        <div className="feels-like text-center">
+                        <div className="feels_like">
                             <h6>{`Feels like ${
                                 parseInt(temp.main.feels_like) - 273
                             }°C`}</h6>
                         </div>
                     </div>
-                </>
+                </div>
             ) : (
-                <p className="error-msg">not found </p>
+                <p>Not found </p>
             )}
         </>
     );
 };
 export default MainCard;
+
+// {typeof temp.sys !== "undefined" ? (
+//     <>
+//         <div className="left-cont col-md-4 col-sm-12">
+//             <div className="country text-center pt-5 ">
+//                 <h1>{`${temp.name}, ${temp.sys.country}`}</h1>
+//             </div>
+//             <div className="description text-center">
+//                < h5>{temp.weather[0].description}</h5>
+//             </div>
+//             <div className="image">
+//                 <img
+//                     src={changeBackground()}
+//                     alt="imagess"
+//                     style={{ height: "15rem" }}
+//                 />
+//             </div>
+//             <div className="temperature text-center">
+//                 <h1>{`${parseInt(temp.main.temp) - 273}°C`}</h1>
+//             </div>
+//             <div className="feels-like text-center">
+//                 <h6>{`Feels like ${
+//                     parseInt(temp.main.feels_like) - 273
+//                 }°C`}</h6>
+//             </div>
+//         </div>
+//     </>
+// ) : (
+//     <p className="error-msg">City Not Found </p>
+// )}

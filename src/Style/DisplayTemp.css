@@ -1,15 +1,12 @@
-.main-wrapper {
+/* .main-wrapper {
     width: 100%;
     max-width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: radial-gradient(
-        circle 993px at 0.5% 50.5%,
-        rgba(137, 171, 245, 0.37) 0%,
-        rgba(245, 247, 252, 1) 100.2%
-    );
+
+
 }
 .inner-container {
     width: 80%;
@@ -17,13 +14,53 @@
     height: 80vh;
     display: flex;
     box-shadow: 0 8px 32px 0 rgba(83, 89, 179, 0.37);
-}
+    border-radius: 2rem;
+    background-color: white;
 
+}
 .left-cont,
 .error-msg {
     width: 30% !important;
     height: 100%;
+    background-color: white;border:2px solid red
+}
+
+
+/
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+/* .main-wrapper {
+    width: 100%;
+    margin: 0 auto !important;
+    float: none !important;
+} */
+
+/* .main-wrapper {
+    border: 2px solid black;
     background-color: white;
+    border-radius: 2rem;
+    height: auto;
+    margin-top: 5rem !important;
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+.left-cont {
+    border: 2px solid red;
+    width: 300px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-cont {
+    border: 2px solid blue;
+    background-color: #ebecf0;
+    border-radius: 2rem;
+
 }
 .country {
     padding-top: 4rem !important;
@@ -31,17 +68,13 @@
 .image {
     height: 27rem;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 .temperature h1 {
     padding: 1rem;
     font-size: 4rem !important;
     font-family: "Balsamiq Sans";
-}
-.right-cont {
-    width: calc(100% - 30%);
-    background-color: #f1f3f5;
 }
 .header {
     display: flex;
@@ -60,24 +93,145 @@
 .flex-container > div {
     height: 12rem;
     margin-top: 2rem;
-    /* border:2px solid red */
 }
 .climate-image,
 .climate-details {
     background-color: white;
     height: 100%;
     width: 100%;
-    /* border-radius: 1.5rem; */
-    /* border:2px solid blue; */
     padding: 1rem;
 }
 
 .sys,
 .unit {
-    /* border:2px solid yellow; */
     text-align: right;
 }
 .value {
     font-size: 2rem !important;
     text-align: right;
+}
+.climate-image {
+    display: flex;
+    justify-content: center;
+}
+.error-msg{
+    width:33.3%;
+    height:70vh;
+    font-size: 2rem;
+    text-align: center;
+    margin:auto
+}
+
+@media only screen and (max-width: 767px) {
+    .main-wrapper {
+        flex-direction: column;
+    }
+}*/
+
+.main-wrapper {
+    /* border: 2px solid black; */
+    background-color: white;
+    border-radius: 2rem;
+    height: auto;
+    margin-top: 10rem !important;
+    max-width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 0 8px 32px 0 rgba(83, 89, 179, 0.37);
+}
+.left-container {
+    /* border: 2px solid red; */
+    flex: 1 1 30% !important;
+}
+.temp-details {
+    /* border:2px solid red; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* align-items: center; */
+}
+.country,
+.temperature {
+    /* border:2px solid red; */
+    height: 7rem;
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+    padding-top: 4rem !important;
+}
+.description,
+.feels_like {
+    /* border:2px solid black; */
+    height: 2rem;
+    padding-bottom: 4rem;
+}
+.image {
+    /* border:2px solid black; */
+    padding: 2rem 0rem;
+}
+.right-container {
+    /* border: 2px solid black; */
+    flex: 1 1 70% !important;
+    border-top-right-radius:2rem;
+    border-bottom-right-radius:2rem;
+    background-color: #ebecf0;
+}
+.header {
+    /* border: 2px solid red; */
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+}
+.flex-cards {
+    display: flex;
+    flex-wrap: wrap;
+    /* border:2px solid rgb(12, 12, 11); */
+    width:100%;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.flex-cards > div{
+    /* border:2px solid rgb(172, 141, 146); */
+    height:12rem;
+    width:17rem;
+    margin:10px;
+    background-color: white;
+}
+.cards{
+    display: flex;
+    border-radius: 20px;
+    /* text-align: center; */
+    /* justify-content: center; */
+}
+.climate_images{
+    /* border:2px solid red; */
+    flex: 1 1 55%;
+    padding-top: 2rem;
+    text-align: center;
+
+
+}
+.climate_description{
+    /* border:2px solid red; */
+    flex: 1 1 45%;
+    padding: 1rem;
+    text-align:end;
+}
+.value{
+    font-size: 1.8rem;
+}
+@media only screen and (max-width: 767px) {
+    .left-container {
+        flex: 1 1 100% !important;
+    }
+    .right-container {
+        flex: 1 1 100% !important;
+    }
+    .flex-cards{
+        padding:0.2rem
+    }
 }

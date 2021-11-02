@@ -5,7 +5,7 @@ import FlexCards from "./FlexCards";
 const DisplayTempCont = (props) => {
     const { temp, search, handleCityNameChange, cityName} = props;
     return (
-        <div className="inner-container">
+        <div className="inner-container" >
             <MainCard temp={temp} />
             <FlexCards
                 temp={temp}
