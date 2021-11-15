@@ -1,0 +1,36 @@
+.temperature-details{
+height:100%
+}
+.city-country-container{
+    /* border:2px solid #0000ff; */
+    text-align: center;
+    padding-top:2rem
+}
+.city-country-container h1{
+    font-size: 3.2rem;
+}
+.description-container{
+    /* border:2px solid #0000ff; */
+    text-align: center;
+}
+.weather-image-container{
+    /* border:2px solid greenyellow; */
+    height:18rem
+}
+.temperature-container{
+    /* border:2px solid palevioletred; */
+    text-align: center;
+}
+.temperature-container h1{
+    font-size: 5rem;
+}
+.feels-like-container{
+    /* border:2px solid forestgreen; */
+    text-align: center;
+}
+
+@media only screen and (max-width:950px){
+    .temperature-details{
+        width:100%
+    }
+}
