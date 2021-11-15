@@ -28,7 +28,9 @@ height:100%
     /* border:2px solid forestgreen; */
     text-align: center;
 }
-
+.weather-image-container{
+    text-align: center;
+}
 @media only screen and (max-width:950px){
     .temperature-details{
         width:100%

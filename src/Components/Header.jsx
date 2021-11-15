@@ -15,7 +15,6 @@ const Header = (props) => {
                     onKeyPress={search}
                     onChange={handleCityNameChange}
                     value={cityName}
-                    // variant="outlined"
                     InputProps={{
                         disableUnderline: true ,
                         endAdornment: (

@@ -1,4 +1,4 @@
-import "./MainCard.css"
+import "./MainCard.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import smoke from "../Images/bonfire.png";
 import clouds from "../Images/clouds.png";
@@ -7,7 +7,7 @@ import dust from "../Images/dust.png";
 import haze from "../Images/haze.png";
 import mist from "../Images/mist.png";
 import sunny from "../Images/sunny.png";
-import rainy from "../Images/raining.png"
+import rainy from "../Images/raining.png";
 import thunder_storm from "../Images/scattered-thunderstorms.png";
 import snow from "../Images/snow.png";
 
@@ -34,7 +34,7 @@ const MainCard = (props) => {
                 return snow;
             } else if (temp.weather[0].description === "light rain") {
                 return rainy;
-            }  else {
+            } else {
                 return clouds;
             }
         }
@@ -42,70 +42,35 @@ const MainCard = (props) => {
 
     return (
         <>
-            {/* {typeof temp.main !== "undefined" ? ( */}
+            {typeof temp.main !== "undefined" ? (
                 <div className="temperature-details">
-
                     <div className="city-country-container">
-                        <h1>Paris</h1>
+                        <h1>{`${temp.name}, ${temp.sys.country}`}</h1>
                     </div>
                     <div className="description-container">
-                        <h4>haze</h4>
+                        <h4>{temp.weather[0].description}</h4>
                     </div>
                     <div className="weather-image-container">
-
+                        <img
+                            className="img-fluid"
+                            src={changeBackground()}
+                            alt="imagess"
+                            style={{ height: "15rem" }}
+                        />
                     </div>
                     <div className="temperature-container">
-                        <h1>7C</h1>
+                        <h1>{`${parseInt(temp.main.temp) - 273}°C`}</h1>
                     </div>
                     <div className="feels-like-container">
-                        <h5>feels like 24c</h5>
+                        <h5>{`Feels like ${
+                            parseInt(temp.main.feels_like) - 273
+                        }°C`}</h5>
                     </div>
                 </div>
-            {/* ) : (<></>)} */}
-
+            ) : (
+                <></>
+            )}
         </>
     );
 };
 export default MainCard;
-
-
-
-
-
-
-
-
-
-
-
-
-
-{/* {typeof temp.main !== "undefined" ? (
-    <Grid className="left-cont" item md={4} xs={12} style={{background:'white',borderTopLeftRadius:'2rem',borderBottomLeftRadius:'2rem'}}>
-        <Box paddingTop={3} style={{ fontSize: "2.8rem" }}>
-            <h1 style={{fontSize:'2.2rem',fontWeight:'600'}}>{`${temp.name}, ${temp.sys.country}`}</h1>
-        </Box>
-        <Box style={{ fontSize: "1rem" }}>
-            <h6>{temp.weather[0].description}</h6>
-        </Box>
-        <Box padding={5}>
-            <img
-                className="img-fluid"
-                src={changeBackground()}
-                alt="imagess"
-                style={{ height: "15rem" }}
-            />
-        </Box>
-        <Box className="temp" paddingTop={3} >
-            <h1>{`${parseInt(temp.main.temp) - 273}°C`}</h1>
-        </Box>
-        <Box style={{ fontSize: "1rem" ,marginBottom:'4rem'}}>
-            {" "}
-            <h6>{`Feels like ${
-                parseInt(temp.main.feels_like) - 273
-            }°C`}</h6>
-        </Box>
-    </Grid>
-) : (
-    <p style={{backgroundColor:'white',width:'100%'}}>City Not Found</p>
-)} */}
