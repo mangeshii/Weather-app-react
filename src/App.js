@@ -1,11 +1,10 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MainCard from "./Components/MainCard";
-import FlexCards from "./Components/FlexCards";
 
 function App() {
     const [cityName, setCityName] = useState("mumbai");
-    const [temp, setTemp] = useState("");
+    const [weatherData, setWeatherData] = useState("");
 
     const APP_ID = "c9c4b2085677b74b3493c03f9f66b8e6";
 
@@ -16,7 +15,7 @@ function App() {
             );
             const data = await res.json();
             console.log(data);
-            setTemp(data);
+            setWeatherData(data);
             setCityName("");
         }
     };
@@ -26,14 +25,29 @@ function App() {
     };
     return (
         <>
-        <MainCard/>
+            <MainCard
+                weatherData={weatherData}
+                search={search}
+                handleCityNameChange={handleCityNameChange}
+                cityName={cityName}
+            />
         </>
     );
 }
 
 export default App;
 
-{/* <div className="wrapper">
+
+
+
+
+
+
+
+
+
+{
+    /* <div className="wrapper">
     <div className="main-container-wrapper container">
             <div className="row">
                 <div
@@ -65,4 +79,5 @@ export default App;
             </div>
 
     </div>
-</div> */}
+</div> */
+}
