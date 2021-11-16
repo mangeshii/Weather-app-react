@@ -8,11 +8,12 @@ const Search = (props) => {
     return (
         <div className="textfield" style={{display:"flex",justifyContent:'end'}}>
 
-            <div className="input_field">
+            <div>
                 <TextField
-                    style={{ backgroundColor:'white',padding:'0px',margin:'0px',borderRadius:'10px'}}
+                 className="input_field"
+                    style={{ backgroundColor:'white',padding:'.3rem 1rem',margin:'0px',borderRadius:'10px'}}
                     type="text"
-                    onKeyPress={search}
+                    onKeyDown={search}
                     onChange={handleCityNameChange}
                     value={cityName}
                     InputProps={{

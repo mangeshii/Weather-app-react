@@ -66,10 +66,10 @@ const MainCard = (props) => {
                                     }°C`}</h1>
                                 </div>
                                 <div className="feels_like">
-                                    <h4>{`Feels like ${
+                                    <h6>{`Feels like ${
                                         parseInt(weatherData.main.feels_like) -
                                         273
-                                    }°C`}</h4>
+                                    }°C`}</h6>
                                 </div>
                             </>
                         ) : (

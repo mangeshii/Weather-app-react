@@ -2,12 +2,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./FlexCards.css";
 import wind from "../Images/wind.png";
 import pressure from "../Images/pressure.png";
-import spyglass from "../Images/spyglass.png";
-import sunset from "../Images/sunset.png";
+import binocular from "../Images/binoculars.png";
+import sunset from "../Images/sea.png";
 import humidity from "../Images/humidity.png";
 import DateAndTime from "./DateAndTime";
 import sunrise from "../Images/sunrise.png";
 import Search from "./Search";
+import ErrorMsg from "./ErrorMsg";
 
 const FlexCards = (props) => {
     const { weatherData, search, handleCityNameChange, cityName } = props;
@@ -52,10 +53,6 @@ const FlexCards = (props) => {
                                         className="img-fluid"
                                         src={wind}
                                         alt="wind"
-                                        style={{
-                                            height: "5rem",
-                                            width: "5rem",
-                                        }}
                                     ></img>
                                 </div>
                                 <div className="wind-speed-details">
@@ -74,10 +71,6 @@ const FlexCards = (props) => {
                                         className="img-fluid"
                                         src={pressure}
                                         alt="wind"
-                                        style={{
-                                            height: "5rem",
-                                            width: "5rem",
-                                        }}
                                     ></img>
                                 </div>
                                 <div className="wind-speed-details">
@@ -97,10 +90,6 @@ const FlexCards = (props) => {
                                         className="img-fluid"
                                         src={humidity}
                                         alt="wind"
-                                        style={{
-                                            height: "5rem",
-                                            width: "5rem",
-                                        }}
                                     ></img>
                                 </div>
                                 <div className="wind-speed-details">
@@ -117,12 +106,8 @@ const FlexCards = (props) => {
                                 <div className="wind-speed-img sys">
                                     <img
                                         className="img-fluid"
-                                        src={spyglass}
+                                        src={binocular}
                                         alt="wind"
-                                        style={{
-                                            height: "5rem",
-                                            width: "5rem",
-                                        }}
                                     ></img>
                                 </div>
                                 <div className="wind-speed-details">
@@ -143,10 +128,6 @@ const FlexCards = (props) => {
                                         className="img-fluid"
                                         src={sunrise}
                                         alt="wind"
-                                        style={{
-                                            height: "5rem",
-                                            width: "5rem",
-                                        }}
                                     ></img>
                                 </div>
                                 <div className="wind-speed-details">
@@ -164,10 +145,6 @@ const FlexCards = (props) => {
                                         className="img-fluid"
                                         src={sunset}
                                         alt="wind"
-                                        style={{
-                                            height: "5rem",
-                                            width: "5rem",
-                                        }}
                                     ></img>
                                 </div>
                                 <div className="wind-speed-details">
@@ -181,7 +158,9 @@ const FlexCards = (props) => {
                         </div>
                     </>
                 ) : (
-                    <p>failed</p>
+                    <div className="error-msg">
+                        <ErrorMsg />
+                    </div>
                 )}
             </div>
         </div>
