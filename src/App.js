@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../src/Style/DisplayTemp.css";
 import MainCard from "./Components/MainCard";
 import FlexCards from "./Components/FlexCards";
 
@@ -27,34 +26,43 @@ function App() {
     };
     return (
         <>
-            <div className="wrapper">
-                <div className="main-container-wrapper container">
-                    <div className="row">
-                        <div
-                            className="col-12 col-md-4"
-                            style={{ backgroundColor: "white" }}
-                        >
-                            <MainCard temp={temp} />
-                        </div>
-                        <div
-                            className="col-12 col-md-8"
-                            style={{
-                                backgroundColor: "#f7f7f7",
-                                padding: "2rem",
-                            }}
-                        >
-                            <FlexCards
-                                temp={temp}
-                                search={search}
-                                cityName={cityName}
-                                handleCityNameChange={handleCityNameChange}
-                            />
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <MainCard/>
         </>
     );
 }
 
 export default App;
+
+{/* <div className="wrapper">
+    <div className="main-container-wrapper container">
+            <div className="row">
+                <div
+                    className="col-12 col-md-4"
+                    style={{
+                        backgroundColor: "white",
+                        borderBottomLeftRadius: "2rem",
+                        borderTopLeftRadius: "2rem",
+                    }}
+                >
+                    <MainCard temp={temp} />
+                </div>
+                <div
+                    className="col-12 col-md-8"
+                    style={{
+                        backgroundColor: "#f7f7f7",
+                        padding: "2rem",
+                        borderTopRightRadius: "2rem",
+                        borderBottomRightRadius: "2rem"
+                    }}
+                >
+                    <FlexCards
+                        temp={temp}
+                        search={search}
+                        cityName={cityName}
+                        handleCityNameChange={handleCityNameChange}
+                    />
+                </div>
+            </div>
+
+    </div>
+</div> */}

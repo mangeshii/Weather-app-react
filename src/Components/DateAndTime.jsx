@@ -1,4 +1,4 @@
-const DisplayDate = () => {
+const DateAndTime = () => {
     const date_time= new Date();
     const weekdays = [
         "Sunday",
@@ -15,4 +15,4 @@ const DisplayDate = () => {
     return (`${todays_day}, ${todays_time}`);
 };
 
-export default DisplayDate;
+export default DateAndTime;

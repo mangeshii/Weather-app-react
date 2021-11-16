@@ -3,10 +3,10 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import SearchIcon from "@material-ui/icons/Search";
 import TextField from "@material-ui/core/TextField";
 
-const Header = (props) => {
+const Search = (props) => {
     const { search, handleCityNameChange, cityName } = props;
     return (
-        <div className="header" style={{display:"flex",justifyContent:'end'}}>
+        <div className="textfield" style={{display:"flex",justifyContent:'end'}}>
 
             <div className="input_field">
                 <TextField
@@ -31,4 +31,4 @@ const Header = (props) => {
     );
 };
 
-export default Header;
+export default Search;

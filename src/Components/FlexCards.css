@@ -1,26 +1,55 @@
-
+/*
 .flex-cards{
     margin-top: 1.5rem;
 }
 .header{
     display: flex;
     justify-content: space-between;
-    padding:1rem 0
+    padding:1rem 0;
 }
 .sys{
-    /* border:2px solid red; */
     margin:auto
 }
 .wind-speed-details{
     width:100%;
     text-align: end;
-    /* border:2px solid blue; */
     margin:auto
 }
 
 .climate-details{
     display: flex;
-    /* border:2px solid red !important; */
     padding:1rem !important;
     height:9rem
+}
+.climate-details{
+background-color: white;
+border-radius: 1rem;
+} */
+
+.flex-cards-container {
+    padding: 2rem;
+}
+.flex-cards {
+    padding: 3rem;
+}
+.climate-details {
+    border: 2px solid red;
+}
+.header {
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    padding:0 3rem
+}
+/* .data-and-time {
+    border: 2px solid red;
+} */
+@media screen and (max-width: 765px) {
+    .col-md-8 {
+        background-color: #f7f7f7;
+    }
+    .header{
+        display: block;
+        text-align: center;
+    }
 }
