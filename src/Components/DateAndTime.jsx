@@ -11,7 +11,7 @@ const DateAndTime = () => {
     ];
     const todays_day = weekdays[date_time.getDay()];
 
-    const todays_time = date_time.getHours() + ":" + date_time.getMinutes();
+    const todays_time = date_time.getHours() + ":" + date_time.getMinutes() ;
     return (
         <h4 style={{fontWeight:'600'}}>
             {`${todays_day}, ${todays_time}`}

@@ -1,47 +1,60 @@
-.main--wrapper {
-    margin: 10% auto;
-    border-radius: 20px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    background: linear-gradient(90deg, #fff 33%, #f7f7f7 33%);
-    padding:1.5rem;
-    max-width: 1250px;
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 35%;
+    padding: 2rem 0;
 }
 
-.cityAndCountry,.description,.image,.temperature,.feels_like{
+.CityAndCountry {
+    font-size: 1.5rem;
     text-align: center;
 }
-.cityAndCountry{
-    padding:1rem 1rem 0 1rem;
-
+.CityAndCountry h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
 }
-.cityAndCountry h1{
-    font-weight: 700;
+.description {
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: capitalize;
 }
-
-.image{
-    height:17rem;
+.description h5 {
+    font-size: 1.4rem;
+}
+.image {
+    height: 18rem;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.temperature h1{
-    font-size: 4.5rem !important;
+.weather-icons {
+    height: 17rem !important;
+    width: 100% !important;
+}
+.temperature {
+    font-size: 2.5rem;
+    text-align: center;
+}
+.temperature h1 {
+    font-size: 5rem;
     font-weight: 700;
 }
-
-@media screen and (max-width: 768px) {
-    .main--wrapper {
-        background: white;
+.feels-like {
+    font-size: 1.5rem;
+    text-align: center;
+}
+@media only screen and (max-width: 950px) {
+    .main-wrapper {
+        flex: 0 1 100%;
+        max-width: 600px;
         margin: 0;
-        border-radius: 0px;
-        padding:2rem 0;
+    }
+}
 
-    }
-    .cityAndCountry h1{
-        font-weight: 700;
-        font-size: 2.5rem;
-    }
-    .feels_like{
-        margin-bottom: 3rem;
+@media only screen and (max-width: 600px) {
+    .main-wrapper {
+        margin: 0;
+        border-radius: 0;
     }
 }
