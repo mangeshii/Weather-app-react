@@ -26,7 +26,7 @@
 }
 .wind {
     text-align: end;
-    padding-right: .5rem;
+    padding-right: 1rem;
 }
 @media only screen and (max-width: 950px) {
     .flex-wrapper {
