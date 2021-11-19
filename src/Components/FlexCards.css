@@ -18,7 +18,7 @@
     justify-content: space-between;
     border-radius: 15px;
     background-color: white;
-    height:9.5rem
+    height:9.5rem;
 }
 .weather-desc-img{
     height: 7rem;
@@ -26,6 +26,7 @@
 }
 .wind {
     text-align: end;
+    padding-right: .5rem;
 }
 @media only screen and (max-width: 950px) {
     .flex-wrapper {
